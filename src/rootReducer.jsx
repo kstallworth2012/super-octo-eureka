@@ -9,7 +9,7 @@ function rootReducer(state=INITIAL_STATE,action){
     // }
 
     switch(action.type){
-        case "CHANGE_NUMBER":
+        case "CHANGE_NUM":
             return {...state, [action.num]:action.value};
 
         default:

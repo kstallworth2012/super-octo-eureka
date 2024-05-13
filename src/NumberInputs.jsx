@@ -4,11 +4,15 @@ import {useDispatch, useSelector} from 'react-redux'
 
 const NumberInputs = () =>{
 	const dispatch = useDispatch()
-	const [inputs,setInputs]=useState({num1:0,num2:0}
+	const {num1,num2}=useSelector(state => ({
+		num1:state.num1,
+		num2:state.num2
+	}))
+	const [inputs,setInputs]=useState({num1,num2})
 
 	const handleChange = e =>{
 		const {value , name} = e.target
-		setInputs(inputs =>({...inputs,[name]:value}))
+		setInputs(inputs =>({...inputs,[name]:+value}))
 	}
 
 
@@ -26,7 +30,7 @@ const NumberInputs = () =>{
         
         <label htmlFor="num1">First FOOKING NUMBER:</label>
 	  <input type="number" id="num1"  value={inputs.num1}
-	  onChange={handleChange},
+	  onChange={handleChange}
 	  name="num1"
 	  />
 	  <button onClick={()=>changeNum('num1')}>Update</button>
@@ -35,8 +39,8 @@ const NumberInputs = () =>{
 	        <label htmlFor="num2">Seond FOOKING NUMBER:</label>
 	  <input 
 		type="number" 
-		id="num2",
-		 value={inputs.num2},
+		id="num2"
+		 value={inputs.num2}
 		 onChange={handleChange}
 		 name="num2"
 		/>

@@ -7,7 +7,7 @@ import NumberInputs from "./NumberInputs"
 function App() {
 
   return (
-    <>return
+    <>
       <BabyMath />
       <NumberInputs />
     </>
