@@ -5,6 +5,7 @@ import './App.css'
 import BabyMath from './babyMath'
 import NumberInputs from "./NumberInputs"
 import InventoryMath from './inventoryMath'
+import  InventoryMathInputs from './inventoryMathInputs'
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
         <hr />
         <h2>Inventory Math</h2>
         <InventoryMath />
+       <InventoryMathInputs />
     </>
   )
 }
