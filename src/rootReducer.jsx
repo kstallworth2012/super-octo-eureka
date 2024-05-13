@@ -1,4 +1,14 @@
-const INITIAL_STATE = {num1:10,num2:10};
+const INITIAL_STATE = {
+    num1:10,
+    num2:10,
+    beginInventory:12120,
+    purchasedInventory:4550,
+    endingInventory:700,
+    totalSales:0,
+    COGS:0,
+    AvgInventoryCost:0,
+
+    };
 
 function rootReducer(state=INITIAL_STATE,action){
     // switch(action.type){
